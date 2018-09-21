@@ -2,6 +2,7 @@ package com.dictionary.model;
 
 public class DictionaryItem {
     private String word;
+
     private String transliteration;
     public String translation;
 
@@ -23,6 +24,11 @@ public class DictionaryItem {
     public String getTranslation() {
         return translation;
     }
+
+    public void setTranslation(String translation) {
+        this.translation = translation;
+    }
+
 
     @Override
     public boolean equals(Object obj) {

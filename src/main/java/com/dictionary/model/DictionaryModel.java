@@ -45,6 +45,12 @@ public class DictionaryModel implements ModelInterface {
             statement.setString(2, word);
             statement.execute();
 
+            if (currentItem != null
+                    && currentItem.getWord().equals(word))
+            {
+                currentItem.setTranslation(newTranslation);
+            }
+
             notifyCurrentItemObservers();
             notifyAllItemsObservers();
         } catch (SQLException e) {
